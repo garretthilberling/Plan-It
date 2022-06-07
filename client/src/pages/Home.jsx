@@ -7,7 +7,7 @@ import { FolderTwoTone } from "@ant-design/icons";
 import { useMutation } from "@apollo/client";
 import { REMOVE_FOLDER } from "../utils/mutations";
 
-const Home = ({ folderId, setFolderId }) => {
+const Home = ({ setFolderTitle, setAspirationData }) => {
   const { loading, data } = useQuery(QUERY_ME);
   const [output, setOutput] = useState("Loading...");
   let myId;
@@ -62,7 +62,10 @@ const Home = ({ folderId, setFolderId }) => {
                     <div key={index} className="relative">
                       <Link
                         to={`/folder/${folder._id}`}
-                        onClick={() => setFolderId(folder._id)}
+                        onClick={() => {
+                          setFolderTitle(folder.title);
+                          setAspirationData(folder.aspirations)
+                        }}
                       >
                         <div className="flex flex-col">
                           <FolderTwoTone className="homepage-folders" />

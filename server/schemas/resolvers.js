@@ -8,7 +8,7 @@ const resolvers = {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                     .select('-__v -password')
-                    .populate('folders');
+                    .populate({ path: 'folders', populate: 'aspirations' });
 
                 return userData;
             }
@@ -30,8 +30,11 @@ const resolvers = {
             return Folder.find(params).sort({ createdAt: -1 });
         },
         // get single folder
-        folder: async (parent, { _id }) => {
-            return await Folder.findById(_id);
+        folder: async (parent, { _id }, context) => {
+            const singleFolder = await Folder.findById(_id)
+            .populate('aspirations');
+
+            return singleFolder;
         },
         // get all users
         users: async () => {
@@ -75,13 +78,12 @@ const resolvers = {
 
         addAspiration: async (parent, args, context) => {
             // if user logged in
-
             if (context.user) {
                 const aspiration = await Aspiration.create({ ...args, username: context.user.username });
                 // push into folder aspirations array
                 await Folder.findByIdAndUpdate(
                     { _id: args.folderId },
-                    { $push: { aspirations: aspiration._id } },
+                    { $push: { aspirations: aspiration } },
                     { new: true }
                 )
                 return aspiration;

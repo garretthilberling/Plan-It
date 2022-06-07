@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 // get session user
 export const QUERY_ME = gql`
-  query Query {
+  query Me {
     me {
       _id
       username
@@ -10,6 +10,23 @@ export const QUERY_ME = gql`
       folders {
         _id
         title
+        createdAt
+        aspirations {
+          _id
+          title
+          description
+          category
+          createdAt
+          date
+          img
+          priority
+          genre
+          focusPoint
+          diet
+          culture
+          whatArticle
+          username
+        }
       }
     }
   }
@@ -17,7 +34,7 @@ export const QUERY_ME = gql`
 
 // get single folder
 export const QUERY_FOLDER = gql`
-  query Query($id: ID!) {
+  query folder($id: ID!) {
     folder(_id: $id) {
       _id
       title
@@ -30,7 +47,7 @@ export const QUERY_FOLDER = gql`
 
 // get all folders
 export const QUERY_FOLDERS = gql`
-  query Query($username: String) {
+  query folders($username: String) {
     folders(username: $username) {
       _id
       title
@@ -40,7 +57,7 @@ export const QUERY_FOLDERS = gql`
 
 // get single aspiration
 export const QUERY_ASPIRATION = gql`
-  query Query($id: ID!) {
+  query aspiration($id: ID!) {
     aspiration(_id: $id) {
       _id
       title

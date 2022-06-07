@@ -49,6 +49,8 @@ const client = new ApolloClient({
 
 function App() {
   const [folderId, setFolderId] = useState('');
+  const [folderTitle, setFolderTitle] = useState('');
+  const [ aspirationData, setAspirationData] = useState('');
 
   return (
     <ApolloProvider client={client}>
@@ -57,10 +59,10 @@ function App() {
           <HamburgerMenu />
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={AuthService.loggedIn() ? <Home folderId={folderId} setFolderId={setFolderId} /> : <GetStarted />} />
+              <Route path="/" element={AuthService.loggedIn() ? <Home setFolderId={setFolderId} setFolderTitle={setFolderTitle} setAspirationData={setAspirationData} /> : <GetStarted />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/folder/:id" element={<SingleFolder folderId={folderId} setFolderId={setFolderId} />} />
+              <Route path="/folder/:id" element={<SingleFolder folderTitle={folderTitle} aspirationData={aspirationData} />} />
               <Route path="/aspirations" element={<Aspirations/>} />
               <Route path="/aspire" element={<CreateAspiration folderId={folderId} />} />
               <Route path="/calendar" element={<CalendarApp />} />
