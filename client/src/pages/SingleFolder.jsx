@@ -8,7 +8,11 @@ const SingleFolder = ({ folderTitle, aspirationData }) => {
 
   return (
     <section>
-      
+      <div className="grid md:grid-cols-3 grid-cols-2 content-around m-4">
+        {aspirationData.map((aspirations, index) => (
+          <div>{aspirations.title}</div>
+        ))}
+      </div>
     </section>
   )
 };

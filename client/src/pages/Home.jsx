@@ -61,7 +61,7 @@ const Home = ({ setFolderTitle, setAspirationData }) => {
                   {folders.map((folder, index) => (
                     <div key={index} className="relative">
                       <Link
-                        to={`/folder/${folder._id}`}
+                        to={`/folder/${folder.title.toLowerCase()}`}
                         onClick={() => {
                           setFolderTitle(folder.title);
                           setAspirationData(folder.aspirations)

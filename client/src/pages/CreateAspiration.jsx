@@ -127,7 +127,7 @@ const CreateAspiration = ({ folderId }) => {
               <button type="submit" className="text-sky-50 my-6 bg-rose-300 hover:bg-bubblegum-400 transition-all duration-300 mx-auto p-1 rounded-md">
                 Submit
               </button>
-              {/* {error && <div>Login failed</div>} */}
+              {error && <div className="text-center text-rose-400">Upload failed</div>}
             </form>
           </div>
         </div>

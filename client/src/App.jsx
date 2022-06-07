@@ -62,14 +62,14 @@ function App() {
               <Route path="/" element={AuthService.loggedIn() ? <Home setFolderId={setFolderId} setFolderTitle={setFolderTitle} setAspirationData={setAspirationData} /> : <GetStarted />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/folder/:id" element={<SingleFolder folderTitle={folderTitle} aspirationData={aspirationData} />} />
+              <Route path="/folder/:name" element={<SingleFolder folderTitle={folderTitle} aspirationData={aspirationData} />} />
               <Route path="/aspirations" element={<Aspirations/>} />
-              <Route path="/aspire" element={<CreateAspiration folderId={folderId} />} />
+              <Route path="/folder/:name/aspire" element={<CreateAspiration folderId={folderId} />} />
               <Route path="/calendar" element={<CalendarApp />} />
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </main>
-          <Nav />
+          <Nav folderTitle={folderTitle} />
         </Router>
       </div>
     </ApolloProvider>
