@@ -108,7 +108,7 @@ const CreateAspiration = ({ folderId }) => {
                 <option value="vegan">Vegan</option>
                 <option value="vegetarian">Vegetarian</option>
                 <option value="pescatarian">Pescatarian</option>
-                <option value="other">Other</option>
+                <option value="other">Other</option> 
               </select>
               <select id="culture" name="culture" className='w-32 mx-auto my-1 rounded-sm px-1'>
               <option value="culture">Culture</option>
