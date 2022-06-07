@@ -42,7 +42,7 @@ const Signup = () => {
           <div className=''>
             <form className='text-slate-900 flex flex-col' onSubmit={handleFormSubmit}>
               <input
-                className='w-10/16 my-1 mx-auto align-middle p-1'
+                className='w-10/16 mx-8 lg:mx-10 my-1 align-middle rounded-sm p-1'
                 placeholder='Your username'
                 name='username'
                 type='username'
@@ -51,7 +51,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               <input
-                className='w-10/16 mx-auto my-1 p-1'
+                className='w-10/16 mx-8 lg:mx-10 my-1 align-middle rounded-sm p-1'
                 placeholder='Your email'
                 name='email'
                 type='email'
@@ -60,7 +60,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               <input
-                className='w-10/16 mx-auto my-1 p-1'
+                className='w-10/16 mx-8 lg:mx-10 my-1 align-middle rounded-sm p-1'
                 placeholder='******'
                 name='password'
                 type='password'

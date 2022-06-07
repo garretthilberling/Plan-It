@@ -38,9 +38,9 @@ const Login = () => {
         <div className='bg-gradient-to-b from-bubblegum-400 to-cream-400 rounded-lg mx-28  w-80 py-2'>
           <h4 className='text-center text-black text-2xl my-6'>Login</h4>
           <div className=''>
-            <form className='text-slate-900 flex flex-col' onSubmit={handleFormSubmit}>
+            <form className='text-slate-900 flex flex-col text-lg md:text-md' onSubmit={handleFormSubmit}>
               <input
-                className='w-10/16 my-1 mx-auto align-middle rounded-sm p-1'
+                className='w-10/16 mx-8 lg:mx-10 my-1 align-middle rounded-sm p-1'
                 placeholder='Your email'
                 name='email'
                 type='email'
@@ -49,7 +49,7 @@ const Login = () => {
                 onChange={handleChange}
               />
               <input
-                className='w-10/16 mx-auto my-1 rounded-sm p-1'
+                className='w-10/16 mx-8 lg:mx-10 my-1 align-middle rounded-sm p-1'
                 placeholder='******'
                 name='password'
                 type='password'
