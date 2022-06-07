@@ -39,9 +39,6 @@ export const ADD_ASPIRATION = gql`
       priority: $priority
     ) {
       _id
-      aspirations {
-        _id
-      }
     }
   }
 `;

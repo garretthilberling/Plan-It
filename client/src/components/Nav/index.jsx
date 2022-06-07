@@ -19,7 +19,7 @@ const Nav = ({ folderTitle }) => {
           <HomeTwoTone className="mobile-btn" style={{color: '#fdf7f3'}}/>
         </Link>
       </div>
-      <Link className="mx-auto" to={location.pathname.includes('/folder') ? `/folder/${folderTitle.toLowerCase()}/aspire` : '/'} >
+      <Link className="mx-auto" to={location.pathname.includes('/folder') ? `/aspire` : '/'} >
         <div className="bg-cream-100 hover:bg-cream-200 transition-all ease-in-out duration-300 rounded-full cursor-pointer new-aspiration-btn">
           <FontAwesomeIcon
             className="new-aspiration text-bubblegum-500"

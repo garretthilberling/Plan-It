@@ -64,7 +64,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/folder/:name" element={<SingleFolder folderTitle={folderTitle} aspirationData={aspirationData} />} />
               <Route path="/aspirations" element={<Aspirations/>} />
-              <Route path="/folder/:name/aspire" element={<CreateAspiration folderId={folderId} />} />
+              <Route path="/aspire" element={<CreateAspiration folderId={folderId} />} />
               <Route path="/calendar" element={<CalendarApp />} />
               <Route path="*" element={<NoMatch />} />
             </Routes>

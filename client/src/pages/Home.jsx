@@ -7,7 +7,7 @@ import { FolderTwoTone } from "@ant-design/icons";
 import { useMutation } from "@apollo/client";
 import { REMOVE_FOLDER } from "../utils/mutations";
 
-const Home = ({ setFolderTitle, setAspirationData }) => {
+const Home = ({ setFolderId, setFolderTitle, setAspirationData }) => {
   const { loading, data } = useQuery(QUERY_ME);
   const [output, setOutput] = useState("Loading...");
   let myId;
@@ -65,6 +65,7 @@ const Home = ({ setFolderTitle, setAspirationData }) => {
                         onClick={() => {
                           setFolderTitle(folder.title);
                           setAspirationData(folder.aspirations)
+                          setFolderId(folder._id)
                         }}
                       >
                         <div className="flex flex-col">

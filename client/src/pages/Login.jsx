@@ -40,7 +40,7 @@ const Login = () => {
           <div className=''>
             <form className='text-slate-900 flex flex-col' onSubmit={handleFormSubmit}>
               <input
-                className='w-10/16 my-1 mx-auto align-middle rounded-sm px-1'
+                className='w-10/16 my-1 mx-auto align-middle rounded-sm p-1'
                 placeholder='Your email'
                 name='email'
                 type='email'
@@ -49,7 +49,7 @@ const Login = () => {
                 onChange={handleChange}
               />
               <input
-                className='w-10/16 mx-auto my-1 rounded-sm px-1'
+                className='w-10/16 mx-auto my-1 rounded-sm p-1'
                 placeholder='******'
                 name='password'
                 type='password'
