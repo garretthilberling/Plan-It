@@ -21,9 +21,10 @@ The following tools were used for this application:
 - React
 - GraphQL
 - Tailwind CSS
-- JWTs
+- JWT
 - MongoDB
 - Mongoose
+- Node
 - Express
 - Apollo/GraphQL
 - BCrypt
@@ -53,7 +54,7 @@ No installation is required to experience this application. Simply visit the dep
 
 # Questions
 
-If you have any questions about the repo, open an issue or contact us on GitHub or LinkedIn:
+If you have any questions, contact us on GitHub or LinkedIn:
 - ### Garret Hilberling
   - [LinkedIn](https://www.linkedin.com/in/garretthilberling/) 
   - [GitHub](https://github.com/garretthilberling)
@@ -69,4 +70,4 @@ If you have any questions about the repo, open an issue or contact us on GitHub 
 
 ## License:
 
-MIT License -https://mit-license.org/ - A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+MIT License -https://mit-license.org/
