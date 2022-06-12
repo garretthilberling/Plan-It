@@ -482,7 +482,7 @@ abbr:where([title]) {
   .dots-position {
       position: absolute;
       top: 0;
-      left: 30%;
+      left: 25%;
   }
 
 
@@ -490,15 +490,27 @@ abbr:where([title]) {
     border: none !important;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1400px) {
     .dots-position {
         left: 25%;
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 900px) {
     .dots-position {
         left: 20%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .dots-position {
+        left: 15%;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .dots-position {
+        left: 8%;
     }
   }
 

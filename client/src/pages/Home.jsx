@@ -84,11 +84,11 @@ const Home = ({ setFolderId, setFolderTitle, setAspirationData }) => {
                             ...
                           </button>
                           <ul className="dropdown-content">
-                            <li className="cursor-pointer text-rich-500 bg-bubblegum-300">
+                            <li className="cursor-pointer text-rich-500 bg-bubblegum-100 border-b-2 border-wine-200">
                               Update
                             </li>
                             <li
-                              className="cursor-pointer text-rose-400 bg-bubblegum-300"
+                              className="cursor-pointer text-rose-400 bg-bubblegum-100"
                               onClick={handleRemoveFolder}
                             >
                               Delete
