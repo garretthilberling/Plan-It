@@ -36,9 +36,9 @@ To get started, first create an account.
 
 Next, create a directory for your plan (we call them aspirations).
 
-Use the search bar to narrow down results!
+<!-- Use the search bar to narrow down results! -->
 
-On the calendar page, select a date to see what aspirations occur on a given date.
+<!-- On the calendar page, select a date to see what aspirations occur on a given date. -->
 
 It's as simple as that. Just create an account and get planning!
 
